@@ -1,0 +1,36 @@
+.component.uploader
+
+  width 100%
+
+  input[type=submit]
+    visibility hidden
+
+  &.has-files
+    input[type=submit]
+      visibility visible
+
+  .control
+    display flex
+    align-items center
+    padding .5em
+
+    input[type=file]
+      flex 1
+      color white
+      font-size .9em
+
+  //&.is-dragover
+  //  background $theme
+
+
+  //input[type=submit]
+  //  dark-button $theme
+
+  .progress
+    position: absolute;
+    top 0
+    left 0
+    height 100%
+    width 0
+    display none
+    transition width .1s linear

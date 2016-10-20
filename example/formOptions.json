@@ -1,0 +1,197 @@
+{
+  "fields": [
+    {
+      "type": "form",
+      "name": "text",
+      "label": "text",
+      "fields": [
+        {
+          "type": "text",
+          "name": "textField",
+          "label": "text",
+          "help": "This is a <strong>simple</strong> text field"
+        },
+        {
+          "type": "text",
+          "name": "textFieldRequired",
+          "label": "text",
+          "required": true,
+          "help": "This is a <strong>required</strong> text field"
+        },
+        {
+          "type": "text/area",
+          "name": "textArea",
+          "label": "text/area"
+        },
+        {
+          "type": "text/code",
+          "name": "textCode",
+          "label": "text/code"
+        },
+        {
+          "type": "text/password",
+          "name": "textPassword",
+          "label": "text/password"
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "name": "number",
+      "label": "number",
+      "fields": [
+        {
+          "type": "number",
+          "name": "number",
+          "label": "number"
+        },
+        {
+          "type": "number/rating",
+          "name": "rating",
+          "label": "number/rating"
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "name": "select",
+      "label": "select",
+      "fields": [
+        {
+          "type": "select/dropdown",
+          "name": "dropdown",
+          "label": "select/dropdown",
+          "options": [
+            {
+              "value": "val1",
+              "label": "value 1"
+            },
+            {
+              "value": "val2",
+              "label": "value 2"
+            }
+          ]
+        },
+        {
+          "type": "select/radios",
+          "name": "radios",
+          "label": "select/radios",
+          "options": [
+            {
+              "value": "val1",
+              "label": "value 1"
+            },
+            {
+              "value": "val2",
+              "label": "value 2"
+            }
+          ]
+        },
+        {
+          "type": "select/radios",
+          "name": "inline_radios",
+          "label": "select/radios (inline)",
+          "inline": true,
+          "options": [
+            {
+              "value": "val1",
+              "label": "value 1"
+            },
+            {
+              "value": "val2",
+              "label": "value 2"
+            }
+          ]
+        },
+        {
+          "type": "checkbox/group",
+          "name": "checkboxGroup",
+          "label": "checkbox/group",
+          "options": [
+            {
+              "value": "val1",
+              "label": "value 1"
+            },
+            {
+              "value": "val2",
+              "label": "value 2"
+            }
+          ]
+        }
+      ]
+    }, {
+      "type": "form",
+      "name": "upload",
+      "label": "upload",
+      "fields": [
+        {
+          "type": "file",
+          "name": "file",
+          "label": "file"
+        },
+        {
+          "type": "file/image",
+          "name": "image",
+          "label": "file/image"
+        }
+      ]
+    }, {
+      "type": "form",
+      "name": "misc",
+      "label": "misc",
+      "fields": [
+        {
+          "type": "tags",
+          "name": "tags",
+          "label": "tags"
+        }, {
+          "type": "button",
+          "name": "button",
+          "label": "button"
+        }
+      ]
+    }, {
+      "type": "form",
+      "name": "structures",
+      "label": "structures",
+      "fields": [
+        {
+          "type": "form",
+          "name": "subform",
+          "label": "form",
+          "fields": [
+            {
+              "type": "text",
+              "name": "textfield",
+              "label": "textfield"
+            }, {
+              "type": "text",
+              "name": "textfield2",
+              "label": "textfield2"
+            }
+          ]
+        }, {
+          "type": "array",
+          "name": "array",
+          "label": "array",
+          "items": {
+            "type": "form",
+            "fields": [
+              {
+                "type": "text",
+                "name": "textfield",
+                "label": "textfield",
+                "additionalClasses": ["horizontal"]
+              }, {
+                "type": "text",
+                "name": "textfield2",
+                "label": "textfield2",
+                "horizontal": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Components showcase</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="form">
+    $$FORM$$
+</div>
+<pre id="value">
+
+</pre>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+        crossorigin="anonymous"></script>
+<script src="campsi.core.js"></script>
+<script src="campsi.components.js"></script>
+<script>
+    var Campsi = require("campsi-core");
+    var Context = function(){
+
+    };
+    Context.prototype.translate = function(){
+        return '*translation'
+    };
+
+    Campsi.wakeUp($("#form").find(' > .component'), new Context(), function (form) {
+        window.FormComponent = form;
+        form.bind('change', function(){
+            $('#value').text(JSON.stringify(form.value, null, 2))
+        });
+        $('#value').text(JSON.stringify(form.value, null, 2));
+        form.attachEvents();
+    });
+</script>
+</body>
+</html>
